@@ -1153,6 +1153,36 @@ html[data-theme="light"] .bar3{background:rgba(12,18,30,.09);}
   div:has(> #svgScat){overflow-x:auto;-webkit-overflow-scrolling:touch;}
   #svgScat{min-width:560px;}
 }
+
+  /* Fabinho, 17/10/2026 — atalho dos highlights na capa e vídeo dentro da página (padrão do Matheus Bitencourt) */
+  .h-cta{margin:18px 0 0;}
+  .h-cta .hlcta,.hlin .hlcta{margin-top:0;padding:11px 20px;font-size:13.5px;}
+  .h-cta .hlcta svg,.hlin .hlcta svg{width:18px;height:18px;flex:0 0 auto;}
+  .hlcta:focus-visible,.hlwa:focus-visible,.vm-x:focus-visible{outline:2px solid #fff;outline-offset:3px;}
+  .hlplay.hllink{cursor:pointer;transition:transform .2s,box-shadow .2s;text-decoration:none;}
+  .hlplay.hllink:hover{transform:scale(1.07);box-shadow:0 0 0 14px rgba(212,175,55,.16);}
+  .hlwa{display:inline-flex;align-items:center;gap:8px;margin:14px 0 0;padding:12px 20px;border-radius:100px;
+    border:1px solid rgba(255,255,255,.34);color:#dfe4ee;font-family:'JetBrains Mono',monospace;font-size:11px;
+    letter-spacing:.03em;text-decoration:none;transition:.2s;}
+  .hlwa:hover{color:#e7c65a;border-color:rgba(231,198,90,.6);}
+  .hlwa svg{width:15px;height:15px;}
+  .vmodal{position:fixed;inset:0;z-index:9999;display:flex;align-items:center;justify-content:center;
+    padding:56px 16px 24px;background:rgba(5,7,12,.9);}
+  .vmodal[hidden]{display:none;}
+  .vm-box{position:relative;width:min(1100px,100%);}
+  .vm-frame{aspect-ratio:var(--ar,1.7778);width:min(100%,calc((100vh - 150px) * var(--ar,1.7778)));margin:0 auto;
+    background:#000;border-radius:14px;overflow:hidden;border:1px solid rgba(255,255,255,.14);}
+  .vm-frame video{width:100%;height:100%;display:block;object-fit:contain;background:#000;}
+  .vm-x{position:absolute;right:0;top:-44px;width:38px;height:38px;border-radius:50%;cursor:pointer;
+    display:flex;align-items:center;justify-content:center;color:#fff;background:rgba(255,255,255,.1);
+    border:1px solid rgba(255,255,255,.28);}
+  .vm-x:hover{background:var(--gold);color:#0a0d14;border-color:var(--gold);}
+  body.vm-open{overflow:hidden;}
+  @media (max-width:900px){
+    #hero .hero-content .wrap{display:flex;flex-direction:column;align-items:flex-start;}
+    #hero .h-cta{order:-1;margin:0 0 18px;}
+    #hero .hh2{align-self:stretch;}
+  }
 </style>
 </head>
 <body>
@@ -1233,6 +1263,8 @@ window.I18NDETF=function(lab,det){const l=document.documentElement.getAttribute(
       <span class="fl"><svg viewBox="0 0 22 15" width="22" height="15"><rect width="22" height="15" rx="2" fill="#009b3a"/><path d="M11 1.5 20 7.5 11 13.5 2 7.5z" fill="#fedf00"/><circle cx="11" cy="7.5" r="3" fill="#002776"/></svg></span>
       <span class="tx"><span class="l l-pt"><b>Canhoto que finaliza igual com os dois pés</b><br>Joga os dois corredores sem perder rendimento</span><span class="l l-en"><b>Left-footed, and just as lethal with his right</b><br>Plays either flank with no drop in output</span><span class="l l-es"><b>Zurdo que define igual con los dos pies</b><br>Juega ambas bandas sin perder rendimiento</span></span>
     </div>
+
+    <div class="h-cta"><a class="hlcta h-atalho" href="videos/destaques-fabinho-2026.mp4" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" width="26" height="26" fill="currentColor"><path d="M8 5v14l11-7z"/></svg><span><span class="l l-pt">Assistir aos highlights</span><span class="l l-en">Watch the highlights</span><span class="l l-es">Ver los highlights</span></span></a></div>
 
     <div class="hh2">
       <div class="c">
@@ -1618,16 +1650,17 @@ window.I18NDETF=function(lab,det){const l=document.documentElement.getAttribute(
   <div class="wrap">
     <div class="eyebrow"><span class="l l-pt">Highlights</span><span class="l l-en">Highlights</span><span class="l l-es">Highlights</span></div>
     <h2 class="st"><span class="l l-pt">Ver o jogador em campo</span><span class="l l-en">See the player on the pitch</span><span class="l l-es">Ver al jugador en cancha</span></h2>
-    <p class="lead"><span class="l l-pt">Compilado de gols, assistências e ações decisivas pelos dois corredores, com as finalizações separadas por pé.</span><span class="l l-en">A compilation of goals, assists and decisive actions from both flanks, with finishes separated by foot.</span><span class="l l-es">Compilado de goles, asistencias y acciones decisivas por ambas bandas, con las definiciones separadas por pie.</span></p>
+    <p class="lead"><span class="l l-pt">Os destaques de Fabinho, em vídeo, para ver o jogo dele em ação.</span><span class="l l-en">Fabinho's highlights, on video, to see his game in action.</span><span class="l l-es">Los destaques de Fabinho, en video, para ver su juego en acción.</span></p>
 
     <div class="hlbox">
       <div class="hlbg"></div>
       <div class="hlgrid"></div>
       <div class="hlin">
-        <div class="hlplay"><svg viewBox="0 0 24 24" width="26" height="26" fill="currentColor"><path d="M8 5v14l11-7z"/></svg></div>
-        <div class="hlt"><span class="l l-pt">Vídeo em produção</span><span class="l l-en">Video in production</span><span class="l l-es">Video en producción</span></div>
-        <div class="hld"><span class="l l-pt">O compilado está sendo montado pela 4ComM e será publicado aqui. Enquanto isso, a equipe envia o material bruto sob solicitação.</span><span class="l l-en">The reel is being cut by 4ComM and will be published here. In the meantime the team can share raw footage on request.</span><span class="l l-es">El compilado está siendo montado por 4ComM y se publicará aquí. Mientras tanto, el equipo envía el material bruto a pedido.</span></div>
-        <a class="hlcta" href="https://wa.me/5511995040598?text=Ol%C3%A1!%20Vim%20pelo%20Player%20Profile%20do%20Fabinho." target="_blank" rel="noopener">
+        <a class="hlplay hllink" href="videos/destaques-fabinho-2026.mp4" target="_blank" rel="noopener" aria-labelledby="hlt-titulo"><svg viewBox="0 0 24 24" width="26" height="26" fill="currentColor"><path d="M8 5v14l11-7z"/></svg></a>
+        <div class="hlt" id="hlt-titulo"><span class="l l-pt">Destaques Fabinho</span><span class="l l-en">Fabinho highlights</span><span class="l l-es">Destaques Fabinho</span></div>
+        <div class="hld"><span class="l l-pt">4min42 · 1080p · toca aqui, na própria página.</span><span class="l l-en">4:42 · 1080p · plays right here on the page.</span><span class="l l-es">4min42 · 1080p · se reproduce aquí, en la propia página.</span></div>
+        <a class="hlcta" href="videos/destaques-fabinho-2026.mp4" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" width="26" height="26" fill="currentColor"><path d="M8 5v14l11-7z"/></svg><span><span class="l l-pt">Assistir aos highlights</span><span class="l l-en">Watch the highlights</span><span class="l l-es">Ver los highlights</span></span></a>
+        <a class="hlwa" href="https://wa.me/5511995040598?text=Ol%C3%A1!%20Vim%20pelo%20Player%20Profile%20do%20Fabinho." target="_blank" rel="noopener">
           <svg viewBox="0 0 24 24" width="13" height="13" fill="currentColor"><path d="M12 2a10 10 0 0 0-8.6 15.1L2 22l5-1.3A10 10 0 1 0 12 2zm5.3 14.2c-.2.7-1.3 1.3-1.9 1.4-.5.1-1.1.1-1.8-.1-.4-.1-.9-.3-1.6-.6-2.9-1.2-4.7-4.1-4.9-4.3-.1-.2-1.1-1.5-1.1-2.9s.7-2 1-2.3c.2-.3.5-.3.7-.3h.5c.2 0 .4 0 .6.4.2.5.7 1.8.8 1.9.1.1.1.3 0 .4-.1.2-.1.3-.3.5l-.4.5c-.1.1-.3.3-.1.6.2.3.8 1.3 1.7 2.1 1.2 1 2.1 1.4 2.4 1.5.3.1.5.1.6-.1.2-.2.7-.8.9-1.1.2-.3.4-.2.6-.1.3.1 1.7.8 2 .9.3.2.5.2.5.4.1.1.1.7-.2 1.2z"/></svg><span><span class="l l-pt">Solicitar o material</span><span class="l l-en">Request the footage</span><span class="l l-es">Solicitar el material</span></span></a>
       </div>
     </div>
@@ -2159,6 +2192,47 @@ const ANIMA = '.pes, .cr, .evgrid, .ocp, .lim';
       svg.querySelectorAll('g.seg').forEach(x=>x.classList.remove('gfoc'));
     }
   });
+})();
+</script>
+<div class="vmodal" id="vmodal" hidden role="dialog" aria-modal="true" aria-label="Video">
+  <div class="vm-box">
+    <button class="vm-x" type="button" aria-label="Close"><svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round"><path d="M5 5l14 14M19 5L5 19"/></svg></button>
+    <div class="vm-frame"></div>
+  </div>
+</div>
+<script>
+/* vídeo tocando na própria página; sem JS, o link abre o arquivo direto */
+(function(){
+  try{
+    var m=document.getElementById('vmodal'); if(!m) return;
+    var frame=m.querySelector('.vm-frame'), last=null;
+    var SRC='videos/destaques-fabinho-2026.mp4';
+    function open(a){
+      last=a; frame.innerHTML='';
+      var v=document.createElement('video');
+      v.src=SRC; v.controls=true; v.autoplay=true; v.playsInline=true;
+      v.setAttribute('playsinline',''); v.setAttribute('preload','auto'); v.setAttribute('aria-label','Video');
+      v.addEventListener('loadedmetadata',function(){ if(v.videoWidth&&v.videoHeight) frame.style.setProperty('--ar',v.videoWidth/v.videoHeight); });
+      frame.appendChild(v); m.hidden=false; document.body.classList.add('vm-open');
+      var p=v.play(); if(p&&p.catch) p.catch(function(){});
+      m.querySelector('.vm-x').focus();
+    }
+    function close(){
+      var v=frame.querySelector('video'); if(v){ v.pause(); v.removeAttribute('src'); v.load(); }
+      m.hidden=true; frame.innerHTML=''; document.body.classList.remove('vm-open');
+      if(last&&last.focus) last.focus();
+    }
+    document.querySelectorAll('a[href]').forEach(function(a){
+      if(m.contains(a)||a.getAttribute('href')!==SRC) return;
+      a.addEventListener('click',function(e){
+        if(e.ctrlKey||e.metaKey||e.shiftKey||e.altKey||e.button!==0) return;
+        e.preventDefault(); open(a);
+      });
+    });
+    m.querySelector('.vm-x').addEventListener('click',close);
+    m.addEventListener('click',function(e){ if(e.target===m) close(); });
+    document.addEventListener('keydown',function(e){ if(!m.hidden&&e.key==='Escape') close(); });
+  }catch(err){}
 })();
 </script>
 </body>
